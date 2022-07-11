@@ -1,9 +1,12 @@
 use std::io;
 use std::io::Write;
 
+mod check_unwrap;
 mod external_json;
+mod lifetime;
 mod looping;
 mod reverse;
+mod secret_number;
 mod structs;
 mod traits;
 mod tree;
@@ -26,6 +29,9 @@ fn main() {
         "8" => structs::initialize_struct(),
         "9" => traits::show_something(),
         "10" => external_json::read_json(),
+        "11" => secret_number::guess_number(),
+        "12" => check_unwrap::do_unwrap(),
+        "13" => lifetime::find_longest(),
         _ => {
             print!("not implemented")
         }
